@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  =device-width, initial-scale=1.0">
+  <title>글자 관련 스타일</title>
+
+  <style>
+    #color-1{
+      color: fuchsia;
+    }
+    #color-2{
+      color: #ffcbcd;
+    }
+    #color-3{
+      color: rgb(105, 158, 0);
+    }
+    #color-4{
+      color: rgba(158,20,150,0.7);
+    }
+    #color-5{
+      color: hsl(200, 100%, 60%);
+    }
+    #color-6{
+      color: hsla(200, 100%, 60%, 0.5)
+    }
+    #deco1{
+      text-decoration: underline;
+    }
+    #deco2{
+      text-decoration: line-through;
+    }
+    #deco3{
+      text-decoration: overline;
+    }
+    #deco>a{
+      text-decoration: none;
+      color: red;
+    }
+    .shadow{
+      font-size: 100px;
+      font-weight: 900;
+      line-height: 150px;
+    }
+    #shadow1{
+      color: orange;
+      text-shadow: 2px 2px orangered;
+
+    }
+    #shadow2{
+      color: white;
+      text-shadow: 0px 1px 20px gray;/*가로 세로 번짐정도 색상*/
+    }
+    #shadow3{
+      color: white;
+      text-shadow: 1px 1px 25px paleturquoise;
+
+    }
+    #bg:active{
+      background: black;
+    }
+    #shadow4{
+      text-shadow: 
+      0px 0px 4px rgb(183, 179, 179),
+      0px -5px 4px yellow,
+      2px -10px 6px orange,
+      2px -20px 20px red;
+      
+    }
+    /*글자간 여백*/
+
+    #ws1{
+      white-space: normal;
+      /*기본값, 공백을 여러개 넣어도 공백 1개만 표시, 글이 길어지면 자동 줄바꿈*/
+    }
+
+    #ws2{
+      white-space: nowrap;
+      /*공백을 여러개 넣어도 1개만표시, 텍스트가 길어도 줄바꿈 되지 않고 한줄로 표시*/
+    }
+    #ws3{
+      white-space: pre;
+      /*공백ㅇ을 그대로 표시 <pre>태그와 같은 표현, 코드에 줍라꿈이 있으면 줄바꿈 표시*/
+    }
+    #ws4{
+      white-space: pre-line;
+      /*공백을 여러개 넣어도 1개만 */
+    }
+
+
+
+  </style>
+</head>
+<body>
+
+  <ul>
+    <li id="color-1">색상명</li>
+    <li id="color-2">16진수(코드표)</li>
+    <li id="color-3">RGB 값</li>
+    <li id="color-4">RGBA 값(A:투명도)</li>
+    <li id="color-5">HSL 값</li>
+    <li id="color-6">HSLA 값</li>
+
+  </ul>
+  
+  <hr>
+
+  <h3>text-decoration : 글자 밑줄,취소선</h3>
+
+  <ul>
+    <li id="deco1">밑줄 표현</li>
+    <li id="deco2">취소선 표현</li>
+    <li id="deco3">윗줄 표현</li>
+
+    <li id="deco4"><a href="#">하이퍼링크 표현</a> </li>
+
+  </ul>
+
+  <h3>text-shadow 글자 그림자</h3>
+
+  <div id="bg">
+    <span id="shadow1" class="shadow" &nbsp &nbsp>HTML5</span>
+    <span id="shadow2" class="shadow"&nbsp &nbsp>HTML5</span>
+    <span id="shadow3" class="shadow"&nbsp &nbsp>HTML5</span>
+    <span id="shadow4" class="shadow" &nbsp &nbsp>HTML5</span>
+  </div>
+
+  <h3>white-space : 글자 간 여백</h3>
+
+  <p id="ws1">국회는 의장 1인과 부의장 2인을 선출한다. 모든 국민은 신체의 자유를 가진다. 누구든지 법률에 의하지 아니하고는 체포·구속·압수·수색 또는 심문을 받지 아니하며, 
+    법률과
+     적법한 절차에 의하지 아니하고는 처벌·보안처분 또는 강제노역을 받지 아니한다. 정기회의
+     회기는 100일을, 임시회의 회기는 30일을 초과할 수 없다.
+  </p>
+  <p id="ws2">국회는 의장 1인과 부의장 
+    2인을 선출한다. 모든 국민은 신체의 자유를 가진다. 누구든지 법률에 의하지 
+    아니하고는 체포·구속·압수·수색 또는 심문을 받지 아니하며, 법률과 적법한 절차에 의하지 아니하고는 처벌·보안처분 또는 강제노역을 받지 아니한다. 정기회의 회기는 100일을, 임시회의 회기는 30일을 초과할 수 없다.
+  </p>
+  <p id="ws3">국회는 의장 1인과 부의장 2인을 선출한다. 모든 국민은 신체의 자유를 가진다. 누구든지 법률에 의하지
+     아니하고는 체포·구속·압수·수색 또는 심문을 받지 아니하며, 법률과 적법한 절차에 의하지 아니하고는 처벌·보안처분 
+     또는 강제노역을 받지 아니한다. 정기회의 회기는 100일을, 임시회의 회기는 30일을 초과할 수 없다.
+  </p>
+  <p id="ws4">국회는 의장 1인과 부의장 2인을 선출한다. 모든 국민은 신체의 자유를 가진다. 누구든지
+     법률에 의하지 아니하고는 
+    체포·구속·압수·수색 또는 심문을 받지 아니하며, 법률과 적법한 절차에 의하지 아니하고는 처벌·보안처분 또는 강제노역을 받지 아니한다. 정기회의 회기는 100일을, 임시회의 회기는 30일을 초과할 수 없다.
+  </p>
+</body>
+</html>
