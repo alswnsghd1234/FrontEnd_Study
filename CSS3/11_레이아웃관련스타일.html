@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    .positioning{
+      border: 1px solid black;
+
+    }
+    .outer{
+      position: relative;/*기준을 잡아주는 속성*/
+    }
+    #first{
+      width: 300px;
+      height: 300px;
+      background-color: blanchedalmond;
+    }
+    #second{
+      width: 200px;
+      height: 200px;
+      background-color: cornflowerblue;
+      position: absolute;
+      top: 50px;
+      left: 50px;
+    }
+    #third{
+      width: 100px;
+      height: 100px;
+      background-color: darksalmon;
+      position: absolute;
+      top: 100px;
+      left: 100px;
+    }
+    .z-test{
+      width: 150px;
+      height: 100px;
+      border: 1px solid black;
+      position: absolute;
+    }
+    #z1{
+      background-color: yellow;
+      top: 100px;
+      left: 100px;
+      z-index: 10000;
+    }
+    #z2{
+      background-color: green;
+      top: 50px;
+      left: 50px;
+      z-index: 1000;
+    }
+    #z3{
+      background-color: red;
+      z-index: 100; /*z-index의 숫자가 높을 수록 위에 쌓겠다라는 의미*/
+    }
+    .vis-test{
+      width: 100px;
+      height: 100px;
+    }
+    #vis{
+      visibility: hidden;
+      display: none;
+    }
+    .float-test{
+      border: 1px solid black;
+      width: 100px;
+      height: 100px;
+      float: right;
+    }
+    .first{
+      border: 4px solid blue;
+      width: 500px;
+      height: 300px;
+      padding: 15px;
+    }
+    .second{
+      border: 1px solid black;
+      width: 200px;
+      height: 300px;
+      float: left;
+      background-image: url("https://search.pstatic.net/common/?src=http%3A%2F%2Fimgnews.naver.net%2Fimage%2F5243%2F2021%2F10%2F07%2F0000074088_001_20211007070231934.jpeg&type=a340");
+      background-repeat: repeat;
+      
+    }
+    .third{
+      width: 250px;
+      height: 300px;
+      background-color: aquamarine;
+      float: right;
+      border: 3px solid orange;
+    }
+  </style>
+  <title>레이아웃 관련 스타일2</title>
+</head>
+<body>
+    <h1>배치 관련 스타일</h1>
+    <h3>position : 절대 위치와 상대위치</h3>
+
+    <div class="outer">
+      <div id="first" class="positioning">첫번째 자식</div>
+      <div id="second" class="positioning">두번째 자식</div>
+      <div id="third" class="positioning">세번째 자식</div>
+    </div>
+
+    <br>
+
+    <h3>고정 위치</h3>
+    <div class="positoning fixed-area"></div>
+
+    <hr>
+    <h3>z-index</h3>
+
+    <p>
+      페이지 안의 요소들을 순서대로 위로 쌓는 속성
+    </p>
+
+    <div class="outer">
+      <div id="z1" class="z-test">첫번째</div>
+      <div id="z2" class="z-test">두번째</div>
+      <div id="z3" class="z-test">세번째</div>
+    </div>
+
+    <hr>
+
+    <br><br><br><br><br><br><br><br><br><br>
+
+    <h3>visibility</h3>
+
+    <p>
+      페이지에 특정요소를 보이거나 보이지 않게 하는 속성
+    </p>
+
+    <div class="vis-test" style="background: red;"></div>
+    <div id="vid" class="vis-test" style="background: green;"></div>
+    <div class="vis-test" style="background-color: blue;"></div>
+
+    <hr>
+    <h3>float</h3>
+
+    <p>
+      페이지 내의 요소들을 화면으로부터 띄워서 왼쪽 또는 오른쪽으로 배치하는 속성
+    </p>
+
+    <div class="float-test">요소1</div>
+    <div class="float-test">요소2</div>
+    <div class="float-test">요소3</div>
+    <div class="float-test">요소4</div>
+    <div class="float-test">요소5</div>
+
+    <!-- float속성으 사용하게 되면 그 이후에 적힌 요소들이 공중에 뜨는 형태로 작성되기 때문에 해제하여야 한다 <br clear="both">-->
+    <br clear="both"><!--float속성 해제-->
+    <span>안녕하세요</span>
+
+    <br><br><br><br><br><br><br><br><br><br>
+
+    <h3>float 실습</h3>
+
+    <div class="first">
+
+      <div class="second"></div>
+        
+        <div class="third">
+          <b>오징어게임</b><br>
+          인기의 비결이 대체 무엇일까..
+        </div>
+      
+    </div>
+
+    
+</body>
+</html>

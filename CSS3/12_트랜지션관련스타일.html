@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  
+  <title>트랜지션 관련 스타일</title>
+
+  <style>
+img{
+  margin-left: 200px;
+  width: 200px;
+  height: 200px;
+}
+.translate:hover{
+  transform: translate(200px,200px);
+}
+.transx:active{
+  transform: translateX(500px);
+}
+.transy:active{
+  transform: translateY(500px);
+}
+.transz:active{
+  transform: translateZ(200px) perspective(100px);
+}
+h3~p{
+  width: 200px;
+}
+
+  .scale:hover{
+    transform: scale(1.5);
+  }
+  .scalex:hover{
+    transform: scaleX(2);
+  }
+.simg:hover{
+  transform: scale(5);
+}
+.skew:active{
+  transform: skewX(50deg);
+  transform: skewY(-50deg);
+  transform: skew(60deg,-30deg)
+}
+.transitiondiv{
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  transition-property: background-color,transform;
+  transition-duration: 1s;
+}
+.transition:active{
+  background-color: coral;
+  transform: translateX(100px);
+}
+.transi:hover{
+  background-color: blueviolet;
+}
+.wrap{
+  width : 70px;
+  height: 70px;
+  background: olive;
+}
+#track:hover div{
+  transform: translate(400px);
+}
+#key1{
+  transition: all 5s linear;
+
+}
+#key2{
+  transition: all 5s ease;
+}
+#key3{
+  transition: all 5s  ease-in;
+}
+#key4{
+  transition: all 5s ease-out;
+}
+#key5{
+  transition: all 5s ease-in-out;
+}
+.wrap2{
+  width: 100px;
+  height: 100px;
+  background-color: darkgoldenrod;
+  border: 2px solid black;
+}
+#dealy{
+  transition: all 3s;
+  transition-delay: 1s;
+}
+#delay:active{
+  width: 400px;
+  height: 100px;
+  background-color: darkgreen;
+  transform: rotateX(360deg);
+
+}
+
+  </style>
+</head>
+<body>
+  <h1>트랜지션 스타일</h1>
+  <h2>변형</h2>
+
+  <p>
+    마우스클릭,마우스 올라감등 동작으로 인한 태그의 변형
+  </p>
+
+  <br><br>
+
+  <h3>태그 이동시키기</h3>
+
+  <p>
+    translate함수를 이용하면 설정된 태그가 특정위치로 이동하게 됨
+  </p>
+
+
+  <img class="translate" src="resources/free-icon-orange-7257171.png" width="200px" height="200px" alt=""><br>
+  <img class="transx" src="resources/free-icon-orange-7257171.png" width="200px" height="200px" alt=""><br>
+  <img class="transy" src="resources/free-icon-orange-7257171.png" width="200px" height="200px" alt=""><br>
+  <img class="transz" src="resources/free-icon-orange-7257171.png" width="200px" height="200px" alt=""><br>
+
+  <br><br>
+  <hr>
+
+  <h3>태그 확대하기</h3>
+  <p class="scale">어 왔니?</p>
+
+  <p class="scalex">
+    안녕하시렵니까
+  </p>
+
+  <img class="simg" src="resources/insta.png" alt="" >
+
+  <br><br>
+
+  <hr>
+
+  <h3>트랜지션 적용하기</h3>
+
+  <p>
+    태그가 변형속성에 의해 변형이 될 때 부드럽게 변형이 되게 하는 속성
+    transition-property:적용할 속성;
+    transition-duration:지속시간;
+    transition-timing-function:linear, ease,ease-in,ease-out;
+    transition:한번에 모든 속성을 지정하는것
+  </p>
+
+  <div class="transitiondiv transition transi"></div>
+
+  <div id="track">
+    <h4>linear : 균일 속도</h4>
+    <div class="wrap" id="key1"></div>
+    <h4>ease: 극초반 느리게 초반 빠르게 끝 느리게</h4>
+    <div class="wrap" id="key2"></div>
+    <h4>ease-in : 점점 빠르게</h4>
+    <div class="wrap" id="key3"></div>
+    <h4>ease-out: 점점 느리게</h4>
+    <div class="wrap" id="key4"></div>
+    <h4>ease-in-out: 시작과 종료지점이 천천히</h4>
+    <div class="wrap" id="key5"></div>
+  </div>
+
+  <h3>트랜지션 지연시키기</h3>
+
+  <div class="wrap2" id="delay"></div>
+
+  <br><br><br><br><br><br><br><br><br><br>
+
+</body>
+</html>

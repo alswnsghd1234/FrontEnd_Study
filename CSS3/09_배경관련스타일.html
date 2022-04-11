@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body{
+      background-color: skyblue;
+    }
+    #div-bg{
+      background-color: white;
+      padding: 50px;
+      border: 30px solid lightblue;
+      width: 50%; /*div의 content의 가로길이는 부모요소 body 의 50%로 지정하겠다*/
+      box-sizing: border-box;
+    }
+    .div-test{
+      margin: 30px;
+      border: 10px dashed;
+      padding: 20px;
+      background-color: lightgoldenrodyellow;
+    }
+    #div1{
+      background-clip: border-box;
+    }
+    #div2{
+      background-clip: padding-box;
+    }
+    #div3{
+      background-clip: content-box;
+    }
+    #bg-img{
+      border: 1px solid black;
+      width: 70%;
+      height: 500px;
+
+      background-image: url(resources/insta.png);
+      background-repeat: repeat-x;
+      background-size: contain;/*가로 세로 상관없이 가득 찰 때까지 채운다*/
+      background-position: center center;
+      background-attachment: scroll;
+    }
+  </style>
+  <title>배경 관련 스타일</title>
+</head>
+<body>
+<h1>배경 관련 스타일</h1>
+
+<h3>background-color:배경색을 지정하고자 할 때 사용</h3>
+<div id="div-bg">
+  가지에 역사를 가치를 이것은 그리하였는가? 청춘에서만 희망의 목숨을 위하여서. 부패를 끓는 이상의 그들의 인생에 생의 이것이다. 사랑의 만물은 보배를 용감하고 천지는 거친 들어 하는 있는가? 싸인 얼음이 끝에 사는가 아니다. 대고, 긴지라 어디 봄날의 소리다.이것은 인간에 보라. 창공에 사랑의 사는가 풀이 풍부하게 아름다우냐? 그들은 전인 군영과 칼이다. 청춘을 청춘의 같이 없으면, 않는 것은 청춘 때문이다. 투명하되 미묘한 아니한 힘차게 쓸쓸하랴?
+</div>
+
+<br>
+
+<h3>background-clip:배경을 적용시키고자하는 범위를 지정할때 사용</h3>
+<pre>
+  선택자{
+    background-clip:border-box/padding-box/content-box;
+  }
+
+  <div class="div-test" id="div1">가지에 역사를 가치를 이것은 그리하였는가? 청춘에서만 희망의 목숨을 위하여서. 부패를 끓는 이상의 그들의 인생에 생의 이것이다. 사랑의 만물은 보배를 용감하고 천지는 거친 들어 하는 있는가? 싸인 얼음이 끝에 사는가 아니다. 대고, 긴지라 어디 봄날의 소리다.이것은 인간에 보라. 창공에 사랑의 사는가 풀이 풍부하게 아름다우냐? 그들은 전인 군영과 칼이다. 청춘을 청춘의 같이 없으면, 않는 것은 청춘 때문이다. 투명하되 미묘한 아니한 힘차게 쓸쓸하랴?</div>
+  <div class="div-test" id="div2">가지에 역사를 가치를 이것은 그리하였는가? 청춘에서만 희망의 목숨을 위하여서. 부패를 끓는 이상의 그들의 인생에 생의 이것이다. 사랑의 만물은 보배를 용감하고 천지는 거친 들어 하는 있는가? 싸인 얼음이 끝에 사는가 아니다. 대고, 긴지라 어디 봄날의 소리다.이것은 인간에 보라. 창공에 사랑의 사는가 풀이 풍부하게 아름다우냐? 그들은 전인 군영과 칼이다. 청춘을 청춘의 같이 없으면, 않는 것은 청춘 때문이다. 투명하되 미묘한 아니한 힘차게 쓸쓸하랴?</div>
+  <div class="div-test" id="div3">가지에 역사를 가치를 이것은 그리하였는가? 청춘에서만 희망의 목숨을 위하여서. 부패를 끓는 이상의 그들의 인생에 생의 이것이다. 사랑의 만물은 보배를 용감하고 천지는 거친 들어 하는 있는가? 싸인 얼음이 끝에 사는가 아니다. 대고, 긴지라 어디 봄날의 소리다.이것은 인간에 보라. 창공에 사랑의 사는가 풀이 풍부하게 아름다우냐? 그들은 전인 군영과 칼이다. 청춘을 청춘의 같이 없으면, 않는 것은 청춘 때문이다. 투명하되 미묘한 아니한 힘차게 쓸쓸하랴?</div>
+</pre>
+
+<hr>
+
+<h3>배경 이미지 테스트</h3>
+
+<pre>
+  선택자{
+    background-image:url(경로);
+    background-repeat:repeat/repeat-x/repeat-y/no-repeat;
+    background-size:auto/
+    background:
+    background-attachment:scroll/fixed
+  }
+</pre>
+<div id="bg-img"></div>
+</body>
+</html>
