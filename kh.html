@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>문제해결시나리오</title>
+
+<link rel="stylesheet" href="/kh.css">
+
+<style>
+
+div {
+
+border : 1px solid lightcoral;
+
+box-sizing : border-box;
+
+
+}
+
+
+
+.wrap {
+
+width : 1000px;
+
+height : 800px;
+
+margin : auto;
+
+}
+
+ 
+
+.wrap>div { width : 100%; }
+
+ 
+
+#header { height : 20%; position: relative;}
+
+#navigator { height : 5%; }
+
+#content { height : 55%; }
+
+#footer { height : 20%; }
+
+ 
+
+#header>div, #content>div {
+
+height : 100%;
+
+float : left;
+
+}
+
+ 
+
+#header_1 {width : 20% ;
+background-color: lightpink}
+
+#header_2 { width : 65%; }
+
+#header_3 { width : 15%; }
+
+ 
+
+#content_1 { width : 15%; }
+
+#content_2 { width : 60%; }
+
+#content_3 { width : 25%; }
+
+ 
+
+/*검색창*/
+
+#header_2 {
+
+position : relative;
+
+}
+
+ 
+
+#search_form {
+
+width : 80%;
+
+height : 20%;
+
+margin : auto;
+
+position : absolute;
+
+right : 0px;
+
+left : 0px;
+
+bottom : 0px;
+
+top : 0px;
+
+
+
+}
+
+ 
+
+#search_form>div {
+
+height : 100%;
+
+float : left;
+
+
+}
+
+ 
+
+#search_text { width : 80%; }
+
+#search_btn { width : 20%; }
+
+ 
+
+#search_form input {
+
+border: lightpink;
+
+width : 100%;
+
+height : 100%;
+
+}
+
+#search_form button{
+
+width: 100%;
+
+height: 100%;
+
+background-color: lightpink;
+
+color: white;
+
+border: lightpink;
+
+font-size: 15px;
+
+font-weight: bold;
+
+}
+
+/*메뉴바 */
+
+#navi {
+  
+
+list-style-type : none;
+
+margin : 0;
+
+padding : 0;
+
+height : 100%;
+
+}
+
+ 
+
+#navi>li {
+
+display: inline-block;
+
+vertical-align: top;
+
+width : 15%;
+
+height : 100%;
+
+text-align : center;
+
+}
+
+ 
+
+#navi a {
+
+text-decoration : none;
+
+color :lightcoral;
+
+font-size : 13px;
+
+font-weight : 900;
+
+width : 100%;
+
+height : 100%;
+
+display : block;
+
+line-height : 35px;
+
+}
+
+ 
+
+#navi a:hover {
+
+color : crimson;
+
+font-size : 15px;
+
+}
+
+ 
+
+#navi ul {
+
+list-style-type : none;
+
+padding : 0;
+
+display: none;
+
+}
+
+ 
+
+#navi>li>ul a { font-size : 10px; }
+
+#navi>li>ul a:hover { font-size : 13px; }
+
+ 
+
+#navi>li>a:hover+ul {
+
+display : block;
+
+}
+
+ 
+
+#navi>li>ul:hover {
+
+
+display : block;
+
+}
+
+#c_2{
+  height: 50%;
+}
+#c_3{
+  height: 25%;
+
+}
+#c_33{
+  height: 25%;
+
+}
+#c_333{
+  height: 50%;
+
+}
+/*메뉴바 끝*/
+
+</style>
+
+
+
+
+
+</head>
+
+<body>
+
+<div class="wrap">
+
+<div id="header">
+
+<div id="header_1"></div>
+
+<div id="header_2">
+
+<form action="test.do" id="search_form">
+
+<div id="search_text">
+
+<input type="search" name="keyword">
+
+</div>
+
+<div id="search_btn">
+
+<button>검색</button>
+
+</div>
+
+</form>
+
+</div>
+
+<div id="header_3"></div>
+
+</div>
+
+<div id="navigator">
+
+<ul id="navi">
+
+<li><a href="">Java</a></li>
+
+<li><a href="">Oracle</a></li>
+
+<li>
+
+<a href="">Front-End</a>
+
+<ul>
+
+<li><a href="">HTML</a></li>
+
+<li><a href="">CSS</a></li>
+
+<li><a href="">JavaScript</a></li>
+
+<li><a href="">jQuery</a></li>
+
+</ul>
+
+</li>
+
+<li>
+
+<a href="">Server</a>
+
+<ul>
+
+<li><a href="">JDBC</a></li>
+
+<li><a href="">Servlet</a></li>
+
+<li><a href="">JSP</a></li>
+
+<li><a href="">Ajax</a></li>
+
+</ul>
+
+</li>
+
+<li>
+
+<a href="">Framework</a>
+
+<ul>
+
+<li><a href="">MyBatis</a></li>
+
+<li><a href="">Spring</a></li>
+
+</ul>
+
+</li>
+
+</ul>
+
+</div>
+
+<div id="content">
+
+<div id="content_1"></div>
+
+<div id="content_2">
+  <div id="c_2"></div>
+  <div id="c_22"></div>
+</div>
+
+<div id="content_3">
+  <div id="c_3"></div>
+  <div id="c_33"></div>
+  <div id="c_333"></div>
+</div>
+
+</div>
+
+<div id="footer">
+
+<div id="footer_1">
+
+<a href="">이용약관</a> |
+
+<a href="">개인정보취급방침</a> |
+
+<a href="">인재채용</a> |
+
+<a href="">고객센터</a>
+
+</div>
+
+<div id="footer_2">
+
+<p id="p1">
+
+강남지원 1관 : 서울특별시 강남구 테헤란로14길 6 남도빌딩 2F, 3F, 4F, 5F, 6F <br>
+
+강남지원 2관 : 서울특별시 강남구 테헤란로10길 9 그랑프리 빌딩 4F, 5F, 7F <br>
+
+강남지원 3관 : 서울특별시 강남구 테헤란로 130 호산빌딩 5F, 6F <br>
+
+종로지원 : 서울특별시 중구 남대문로 120 대일빌딩 2F, 3F <br>
+
+당산지원 : 서울특별시 영등포구 선유동2로 57 이레빌딩 (구관) 19F, 20F
+
+
+
+</p>
+
+<p id="p2">
+
+Copyright © 1998-2021 KH Information Educational Institute All Right Reserved
+
+
+
+</div>
+
+</div>
+
+</div>
+
+
+</body>
+
+</html>

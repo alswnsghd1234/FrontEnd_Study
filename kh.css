@@ -1,0 +1,52 @@
+#footer>div { width : 100%; }
+
+#footer_1 { height : 20%; }
+
+#footer_2 { height : 80%; }
+
+
+
+#footer_2>p {
+
+width : 100%;
+
+margin : 0;
+
+box-sizing : border-box;
+
+font-size : 12px;
+
+}
+
+
+
+#p1 {
+
+height : 80%;
+
+padding : 5px 15px;
+
+}
+
+#p2 {
+
+height : 20%;
+
+text-align : center;
+
+}
+
+
+#footer_1>a {
+
+text-decoration : none;
+
+color : black;
+
+font-weight : 600;
+
+margin : 15px;
+
+vertical-align : middle;
+
+}

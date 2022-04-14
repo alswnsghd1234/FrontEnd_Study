@@ -22,7 +22,7 @@
       form 태그 내의 submit버튼 클릭 시 해당 form 내에 작성된 <br>
       사용자가 입려한 값들을 서버로 넘기면서 요청하는 역할 <br><br>
 
-      from action="" method="" <br>
+      form action="" method="" <br>
 
       *action 속성 : 해당 form내에 사용자가 입력한 값들을 전달하면서 요청할 서버의 경로들 제시한다 <br>
       *method 속성 : 요청 전송 방식을 지정하는 속성(get(기본값)/post) <br>
@@ -82,5 +82,198 @@
         이메일 : <input type="email">
       </p>
     </form>
+
+    <h2>textarea 태그</h2>
+
+    <p>텍스트 상자이지만 여러줄을 입력할 수 있는 태그
+
+    </p>
+
+    <form action="test.do">
+      <fieldset>
+        <legend>글작성</legend>
+
+        글제목: <input type="text" name="title" size="30"> <br>
+        글내용: <textarea name="content"  cols="30" rows="10" style="resize: none;">
+          <br><br>
+          <input type="submit" value="전송하기">
+        </textarea>
+      </fieldset>
+    </form>
+<hr>
+
+<<h2>숫자와 관련된 input 태그의 타입</h2>
+
+<form action="test.do">
+  <h3>type="number"</h3>
+  <p>
+    -숫자값만 작성가능한 텍스트 상자
+    -스핀박스가 추가된다(위아래 화살표 버튼)
+  </p>
+  수량: <input type="number" name="count" min="0" max="20" step="3" value="0">
+
+  <h3>type="range"</h3>
+  <p>
+    슬라이드바를 통해 숫자 지정가능
+  </p>
+
+  점수 : <input type="range" name="score" min="0" max="100" step="10"> <br>
+
+  <input type="submit" value="전송">
+  <input type="reset"> <!--초기화 버튼-->
+</form>
+
+<hr>
+
+<h2>날짜 및 시간과 관련된 input태그의 타입</h2>
+
+<form action="test.do">
+  <h3>type="date/month/week/time/datetime-local"</h3>
+
+  date : <input type="date" name="dateIn"> <br>
+
+  month : <input type="month" name="monthIn"> <br>
+
+  week : <input type="week" name="weekIn"> <br>
+
+  time : <input type="time" name="timeIn">
+
+  datetime-local : <input type="datetime-local" name="datetime-localIn"><br>
+
+  <!-- <input type="submit" value="보내기"> -->
+
+  <button type="submit">제출하기</button>
+
+</form>
+
+<h2>라디오버튼과 체크박스 관련 input 태그 타입</h2>
+
+<form action="test.do">
+
+  <h3>
+    라이도 버튼 type="radio"
+  </h3>
+
+  <p>
+    제시한 여러개의 값들 중에서 오로지 한개만 선택해야 할 때 <br>
+    name속성값이 같아야 하나로 묶인다(그룹).
+    제출(submit)시 현재 선택되어진(checked) 데이터가 넘어간다.
+  </p>
+
+  성별:
+  <input type="radio" id="radioX" name="gender" value="X" checked><label for="radioX">선택안함</label>
+  <input type="radio" id="radioY" name="gender" value="M" checked><label for="radioM">남자</label>
+  <input type="radio" id="radioF" name="gender" value="F" checked><label for="radioF">여자</label>
+
+  <br>
+
+  <h3>체크박스 type="checkbox"</h3>
+
+  <p>
+    제시한 여러개의 값들 중에서 여러개를 선택 가능한 경우 <br>
+    현재 선택된 checked값들이 넘어간다 <br>
+    넘기고자 하는 value값을 명시해야한다.
+  </p>
+
+  취미:
+  <input type="checkbox" name="hobby" value="sleep" id="sleep">
+  <label for="sleep">잠자기</label>
+  <input type="checkbox" name="hobby" id="listensong" value="listensong">
+  <label for="listensong">노래듣기</label>
+  <input type="checkbox" id="drunk" name="hobby" value="drunk">
+  <label for="drunk">술먹기</label>
+
+  <br><br>
+
+  <input type="submit" value="전송">
+</form>
+
+<hr>
+
+<h2>추가적인 input 태그 타입</h2>
+
+<form action="test.do">
+
+  <h3>색상 선택 input 타입 type="color"</h3>
+
+  <p>
+    색상을 선택할 수 있는 input <br>
+    색상선택 : <input type="color">
+  </p>
+
+  <h3>
+    파일선택 type="file" <br>
+  </h3>
+
+  <p>
+    첨부하고자하는 파일을 선택할 수 있는 input <br>
+    <input type="file">
+  </p>
+
+  <h3>사용자에게 보여주지 않고 데이터를 넘기는 태그 type="hidden"</h3>
+
+  <p>
+    특정값을 사용자에게 노출시키지 않고 넘기고자 하는 값이 있을때 사용하는 input <br>
+    안보여요 : <input type="hidden" name="hidden">
+  </p>
+
+  <br><br>
+
+  <h3>type=button/reset/submit</h3>
+  <input type="button" value="버튼이다">
+  <input type="submit" value="제출">
+  <input type="reset" value="되돌려">
+
+  <br><br>
+  <h3>button type=submit/reset/button</h3>
+  <button type="submit">submit버튼</button>
+  <button type="reset">reset버튼</button>
+  <button type="button">일반버튼</button>
+
+  <!--form태그 안에서 button타입을 지정하지 않으면 submit 타입이 된다.-->
+  <button>그냥버튼</button>
+
+</form>
+
+<hr>
+
+<h2>select태그와 option태그</h2>
+
+<p>
+  사용자에게 직접 입력받는게 아니라 <br>
+  내가 제시한 여러 옵션들 중에서 선택할 수 있게 해주는 태그 <br>
+  제출 시 선택된 selected 값이 넘어간다 <br>
+  각각의 option에 value값을 명시했을경우 value값이 넘어간다 <br>
+  명시하지 않았을 경우 기본 option태그의 content영역
+  (시작태그와 종료 태그 사이)의 값이 넘어간다 <br>
+
+</p>
+
+<form action="test.do">
+
+  지금기분:
+  <select name="feel" id="feel">
+    <option value="vg">매우좋음</option>
+    <option value="g">좋음</option>
+    <option value="ss">보통</option>
+    <option value="nb">나쁘지않음</option>
+    <option value="b">나쁨</option>
+  
+  </select>
+
+  <br><br>
+
+  <!--목록에 없더라도 직접 기술해서 넘길 수 있다-->
+  <input type="text" list="feellist">
+  <datalist id="feellist">
+    <option value="vg">매우좋음</option>
+    <option value="g">좋음</option>
+    <option value="ss">보통</option>
+    <option value="nb">나쁘지않음</option>
+    <option value="b">나쁨</option>
+  </datalist>
+</form>
+
+
 </body>
 </html>
