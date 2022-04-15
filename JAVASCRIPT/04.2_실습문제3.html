@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    #area{
+      border:1px solid black;
+      width: 400px;
+      height: 200px;
+      background-color: lightblue;
+    }
+  </style>
+  
+  <title>실습 문제</title>
+</head>
+<body>
+  <h1>HTML 태그에 접근 테스트</h1>
+  <h3>단, 구매자는 태그이름으로 접근,상품명은 아이디로 접근,구매가격은 name으로 접근</h3>
+  <label for="">구매자</label>
+  <input type="text" id="customer" placeholder="구매자의 이름을 입력하세요.">
+  <br><br>
+  <label for="pname">상품명 :</label>
+  <input type="text" id="pname" placeholder="구매 상품명을 입력하세요">
+  <br><br>
+  <label for="price">가격</label>
+  <input type="text" id="price" name="priceName" placeholder="구매 가격을 입력하세요.">
+  <br><br>
+
+  <button onclick="input();">입력값 출력하기</button>
+  <br>
+  <div id="area"></div>
+
+  <script>
+    function input() {
+      var tagNames = document.getElementsByTagName("input");
+      var userName = tagNames[0].value;
+
+      var pName = document.getElementById("pname").value;
+
+      var price = document.getElementsByName("priceName")[0].value;
+
+
+      console.log(userName);
+      console.log(pName);
+      console.log(price);
+
+      var divArea=document.getElementById("area");
+
+      divArea.innerHTML+="구매자 :"+userName+"<br>";
+      divArea.innerHTML+="상품명 :"+pName+"<br>";
+      divArea.innerHTML+="가격 :"+price+"원";
+    }
+  </script>
+  
+</body>
+</html>

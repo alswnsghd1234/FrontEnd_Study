@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>실습 문제</title>
+  <style>
+    #div1,#div2{
+      border: 1px solid black;
+      width: 100px;
+      height: 100px;
+      background-color: black;
+    }
+  </style>
+</head>
+<body>
+    <button onclick="makeTable();">행열의 개수는?</button>
+
+    <div class="area" id="area1"></div>
+    <script>
+      function makeTable(){
+        var col = window.prompt("행의 개수는?");
+        var row = window.prompt("열의 개수는?");
+
+        var count=1;
+
+            var table="<table border='1'>";
+              for(var i=0;i<row;i++){
+                table+='<tr>';
+                  //행을 열었으니 안에 열을 포함해주자.
+                  for(var j=0;j<col; j++){
+                    //열의 개수를 받아서 표현하는 곳
+                    table+='<td width="30" height="30" "text-align:center">'+count++ +'<td>';
+                  }
+
+
+                table+='<tr>';
+              }
+
+              table+="</table>";
+
+        document.write(table);
+
+        
+      }
+    </script>
+
+
+
+    <h3>문제1. 색상 선택후 변경 버튼을 클릭하면 색상이 변경되도록 만드시오 <br>
+    </h3>
+
+    <div id="idv1"></div>
+    <input type="color" name="" id="selectColor">
+    <button onclick="changeColor();">변경</button>
+
+    <script>
+      function changeColor(){
+        var div1 = document.getElementById("div1");
+        var selectColor= document.getElementById("selectColor");
+
+        console.log(selectColor.value);
+
+        div1.style.backgroundColor=selectColor.value;
+
+      }
+    </script>
+
+    <br><br>
+
+    <h3>문제2.</h3>
+    <div id="div2"></div>
+    <br>
+    <button onclick="sethalf();">50x50</button>
+    <button onclick="setdefault();">원본(100x100)</button>
+    <button onclick="setdouble();">더블(200x200)</button>
+
+    <script>
+      
+      var div2=document.getElementById("div2");
+
+      function sethalf(){
+        div2.style.width = '200px';
+        div2.style.height = '200px';
+      }
+    </script>
+
+</body>
+</html>
