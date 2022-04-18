@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>객체</title>
+  <style>
+    .area{
+      background-color: cornsilk;
+      border: 1px solid black;
+    }
+    .small{
+      height: 200px;
+    }
+    .big{
+      height: 400px;
+    }
+  </style>
+</head>
+<body>
+  <h1>객체</h1>
+
+  <h3>객체 선언 및 호출</h3>
+
+  <p>
+    객체는 {} 중괄호를 사용해서 생성하고 <br>
+    중괄호 안에 이 객체에 필요로하는 속성들을 정의한다 <br>
+    속성 : 속성값 의 형태로 정의한다.(키:밸류) <br>
+    속성값으로는 모든 자료형의 값을 담을 수 있다.
+  </p>
+
+  <pre>
+    var 변수명 ={
+      속성명:속성값,
+      속성명:속성값,
+      속성명:속성값,
+      속성명:속성값,
+      ...
+    }
+  </pre>
+
+  <button onclick="test1();">확인</button>
+  <div id="area1" class="area"></div>
+
+  <script>
+    function test1(){
+      var arr=["글자",155,["오늘","내일"]]; // java에서 컬렉션과 유사 ArrayList
+
+      var product = {
+        pName:"피카츄인형",
+        price:30000,
+        color:["yellow","black","red"]
+      }; //자바스크립트의 객체 = java의 HahsMap
+
+      console.log(product);
+      console.log(typeof(product));
+
+      var area1=document.querySelector("#area1");
+      area1.innerHTML += "product : "+product+"<br>";
+      // product : [object Object] 타입을 알려주는 형태로 출력
+
+      //객체 내부 속성에 직접적으로 접근하려면
+      //방법1 : 대괄호를 이용해서 접근 : 객체명["속성명"]
+      area1.innerHTML += "<b>방법1.객체명['속성명']으로 접근하기 </b>";
+      area1.innerHTML += "product['pName'] : "+product['pName']+"<br>";
+      area1.innerHTML += "product['color'] : "+product['color']+"<br>";
+      area1.innerHTML += "product['price'] : "+product['price']+"<br>";
+      area1.innerHTML += "product['color'][0] : "+product['color'][0]+"<br>";
+
+
+      //방법2 : .을 이용하는 방법 : 객체명.속성명
+      area1.innerHTML +="<b>방법2. 객체명.속성명으로 접근하기 </b>";
+      area1.innerHTML +="producut.pName : "+product.pName + "<br>";
+      area1.innerHTML +="producut.price : "+product.price + "<br>";
+      area1.innerHTML +="producut.color : "+product.color + "<br>";
+      area1.innerHTML +="producut.color[1] : "+product.color[1] + "<br>";
+
+    }
+  </script>
+
+  <br>
+
+  <h3>
+    객체 생성 특이케이스(속성명 제시시 반드시 문자열 형태로 제시해야되는 케이스)
+  </h3>
+
+  <button onclick="test2();">확인</button>
+  <div id="area2" class="area small"></div>
+  <script>
+    function test2(){
+      //속성명 제시시 공백이나 특수문자가 포함될 경우 반드시 문자열의 형태로 제시해야 한다.
+
+      var user ={
+        "user name":"이승기",
+        "age!!!":35
+      };
+      console.log(user);
+    
+
+    var area2=document.querySelector("#area2");
+
+    // area2.innerHTML+="user name : "+user."user name"+"<br>";
+    //area2.innerHTML+="age!!! : " +user. 
+    
+    area2.innerHTML+="user name : "+user['user name']+"<br>";
+    area2.innerHTML+="age!!! : "+user['age!!!']+"<br>";
+    }
+
+  </script>
+  <h3>객체에서의 반복문</h3>
+
+  <p>
+    객체가 가지고 있는 모든 속성들에 순차적으로 접근하고자 한다면 반복문 제시 <br>
+    단, 단순 for loop 문으로는 불가능하고 for in 문을 사용해야한다.
+  </p>
+
+  <button onclick="test3();">확인</button>
+
+  <div id="area3" class="area small"></div>
+  <script>
+    function test3(){
+
+      var arr=["파이리","불꽃",5000];
+
+      for(var i in arr){
+        area3.innerHTML+=arr[i] +"<br>";
+      }
+
+      let area3 = document.querySelector("#area3");
+
+      let place={
+          name:"당산",
+          weather:"구름낌",
+          floor:20,
+          class:['a','b','c','d','e'],
+          service:true,
+          key:"키"
+      };
+      for(let key in place){
+        area3.innerHTML+=key + ":"+ place[key] + "<br>";
+            }
+    }
+  </script>
+
+  <h3>객체의 메소드 속성</h3>
+
+  <p>
+    객체의 속성 중 함수 자료형인 속성을 메소드라고 부른다.
+  </p>
+
+  <button onclick="test4();">확인</button>
+  <div id="area4" class="area small"></div>
+
+  <script>
+    function test4(){
+
+      var area4 =document.getElementById("area4");
+
+      var name = "민준홍";
+
+      var dog ={
+        name:"쪼꼬",
+        kind:"믹스견",
+        eat:function(food){
+          area4.innerHTML += "eat 메소드가 호출되었습니다.";
+
+          area4.innerHTML += this.kind+"종류인"+this.name+"가 "+food+"을 먹고있다.";
+        }
+      };
+
+      dog.eat("사료");
+    }
+    
+  </script>
+
+  <h3>in과 with 키워드</h3>
+
+  <p>
+    in: 객체 내에 해당 속성이 있는지 확인 시켜주는 키워드 <br>
+    with : 객체명 제시하는것을 생략할 수 있음 (코드를 줄여주는 키워드)
+  </p>
+
+  조이름 : <input type="text" id="name"><br>
+  주제 : <input type="text" id="topic"><br>
+  점수 : <input type="number" id="score"><br>
+
+  <button onclick="test5();">확인</button>
+
+  <div id="area5" class="area big"></div>
+  <script>
+    function test5(){
+
+      var name =document.getElementById("name").value;
+      var topic = document.querySelector("#topic").value;
+      var score = Number(document.getElementById("score").value);
+
+      var student={
+        name:name,
+        topic:topic,
+        score:score,
+        toString:function(){
+          return this.name + " " +this.topic+" "+this.score;
+        }
+
+      };
+
+      var area5 = document.getElementById("area5");
+
+      area5.innerHTML+="조이름  :"+name+"<br>";
+      area5.innerHTML+="주제  :"+topic+"<br>";
+      area5.innerHTML+="점수  :"+score+"<br>";
+
+      area5.innerHTML+="조이름  :"+(name in student)+"<br>";
+      area5.innerHTML+="주제  :"+(topic in student)+"<br>";
+      area5.innerHTML+="점수  :"+(score in student)+"<br>";
+
+      with(student){
+        area5.innerHTML +="조이름" +student.name+"<br>";
+        area5.innerHTML +="toString" +student.toString+"<br>";
+      }
+
+      with(Math){
+        var a=random();
+        var b=PI;
+      }
+
+      console.log(a);
+      console.log(b);
+
+      //속성명 in 객체명 : 해당 객체 내에 해당하는 속성이 존재할경우 true 없으면 false
+
+      area5.innerHTML += name + topic +score;
+    }
+  </script>
+
+  <h3>연습문제</h3>
+
+  <p>
+    학생이름 국어성적 수학 영어 성적 입력받고 <br>
+
+  </p>
+  이름 : <input type="text" id="name"><br>
+  국어 : <input type="number" id="ko"><br>
+  수학 : <input type="number" id="math"><br>
+  영어 : <input type="number" id="en"><br>
+
+  <button onclick="test6();">실명확인</button>
+
+  <div id="area6" class="area big"></div>
+
+  <script>
+    function test6(){
+      var name=document.getElementById("name").value;
+      var ko=Number(document.getElementById("ko").value);
+      var math=Number(document.getElementById("math").value);
+      var en=Number(document.getElementById("en").value);
+
+      var student={
+        name:name,
+        ko:ko,
+        math:math,
+        en:en,
+        toString:function(){
+
+          return this.name+ " "+ this.ko +" "+this.math +" "+this.en;
+        },
+        getSum:function(){
+          return this.ko+this.math+this.en;
+        },
+        getAvg:function(){
+          return getSum()/3;
+        }
+      }
+
+      var area6 = document.getElementById("area6");
+
+      area6.innerHTML+="student : "+student+"<br>";
+      area6.innerHTML+="sum : "+student.getSum()+"<br>";
+      area6.innerHTML+="avg : "+student.getAvg()+"<br>";
+
+    }
+  </script>
+  
+
+</body>
+</html>
