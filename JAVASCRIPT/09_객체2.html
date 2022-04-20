@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체2</title>
+    <style>
+        .area{
+            background-color: rgb(181, 218, 255);
+            border: 1px solid black;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>객체2</h1>
+    <h3>객체 배열을 사용한 다량의 데이터 관리</h3>
+
+    <button onclick="test01();">확인</button>
+    <div id="area1" class="area"></div>
+    <script>
+        function test01(){
+            var student1 ={name:"김우빈",java:100,oracle:80,html:50,css:35};
+            var student2 ={name:"구준표",java:10,oracle:10,html:10,css:15};
+            var student3 ={name:"금잔디",java:100,oracle:100,html:100,css:5};
+            var student4 ={name:"박새로이",java:50,oracle:50,html:50,css:50};
+
+            var students = [];
+
+            students.push(student1);
+            students.push(student2);
+            students.push(student3);
+            students.push(student4);
+
+            console.log(students);
+            console.log(students[1].name);
+
+            for(var i in students){
+                students[i].javascript = 100;
+                students[i].getSum = function(){
+                    return this.java + this.oracle + this.html +this.css + this.javascript;
+                }
+                students[i].getAvg = function(){
+                    return this.getSum()/5;
+                }
+            }
+            console.log(students);
+
+            var area1=document.getElementById("area1");
+        for(var i in students){
+            with(students[i]){
+                area1.innerHTML +="이름:"+name +" 총점:"+getSum()+" 평균:"+getAvg()+"<br>";
+            }
+        }
+    }
+    </script>
+
+    <hr>
+
+    <h3>생성자 함수</h3>
+    <p>
+        new 키워드를 사용해서 객체를 생성할 수 있는 함수를 의미한다. (함수명 제시시 첫글자를 대문자로)
+    </p>
+
+    <button onclick="test02();">확인</button>
+    <div id="area2" class="area"></div>
+    <script>
+        function test02(){
+            var student1 = new Student("김수한",100,50,60,50,30);
+            var student2 = new Student("이럴수",50,70,80,60,30);
+            var student3 = new Student("박으로",20,20,60,100,90);
+
+            console.log(student1);
+            var students =[student1,student2,student3];
+            console.log(students);
+            for(var i in students){
+            document.getElementById("area2").innerHTML+=students[i];
+            }
+        }
+
+
+        //생성자 함수
+        function Student(name,java,oracle,html,css,javascript){
+            this.name=name;
+            this.java=java;
+            this.oracle=oracle;
+            this.html=html;
+            this.css=css;
+            this.javascript=javascript;
+
+            //메소드 속성정의
+            this.getSum = function(){
+                return this.java + this.oracle+this.html+this.css+this.javascript;
+            }   
+            this.getAvg = function(){
+                return this.getSum()/5;
+            }
+            this.toString = function(){
+                return "이름 : "+this.name+" 총점 : "+this.getSum()+" 평균 : "+this.getAvg()+"<br>";
+            }
+
+        }
+    </script>
+
+    <hr>
+    <h3>Date 내장객체</h3>
+    <button onclick="test03();">확인</button>
+    <div id="area3" class="area"></div>
+    <script>
+        function test03(){
+
+            let area3 = document.getElementById("area3");
+
+            let date1 = new Date(); //현재 날짜 및 시간
+
+            console.log(date1);
+
+            //2022년 2월 17일 
+
+            let date2 = new Date(2022,2-1,17); //내부적으로 월이 +1 되기때문에 -1을 해줘야 원하는 월을 뽑을수 있음
+
+            area3.innerHTML+="Date() : "+date1 +"<br>";
+            area3.innerHTML+="Date(2022,2,17) :"+date2+"<br>";
+
+            //2022년 2월 17일 09 30 01 
+
+            let date3 = new Date(2022,2-1,17,09,30,01);
+            area3.innerHTML+="Date(2022,2-1,17,09,30,01) :"+date3+"<br>";
+
+            //밀리세컨초(ms)
+            //1s = 1000ms
+
+            let date4 = new Date(2022,2-1,17,09,30,01,4000);//4000ms = 4초라서 4초가 추가된 5초로 값이 나온다.
+            area3.innerHTML+="Date(2022,2-1,17,09,30,01,4000) : "+date4+"<br>";
+
+            //년도만 알아내고 싶다면
+            area3.innerHTML+="년도 : "+date1.getFullYear() +"<br>";
+            //월만 알아내고 싶다면 (0~11이라 +1을 해줘야한다)
+            area3.innerHTML+="월 : "+(date1.getMonth()+1)+"<br>";
+            //일만 알아내고 싶다면 
+            area3.innerHTML+="일 : "+date1.getDate() +"<br>";
+            //요일만 알아내고 싶다면 (0~6) 0이 일요일
+            area3.innerHTML+="요일 : "+date1.getDay() +"<br>";
+            //시간만 알아내고 싶다면
+            area3.innerHTML+="시간 :"+date1.getHours()+"<br>";
+            //분만 알아내고 싶다면
+            area3.innerHTML+="분 : "+date1.getMinutes()+"<br>";
+            //초만
+            area3.innerHTML+="초 : "+date1.getSeconds()+"<br>";
+
+            //종강일까지 디데이 구하기
+            var now = new Date(); //현재 날짜
+            var end = new Date(2022,7-1,29,6,20,00);
+
+            area3.innerHTML+="종강일 디데이 : "+(end-now)+"<br>";//밀리세컨드초로 계산결과가 나옴
+            //1s = 1000ms
+            //1m = 60 * 1000
+            //60m = 60 * 60 * 1000
+            //1d = (24 * 60 * 60 * 1000)
+
+            var dday = (end-now)/(24 * 60 * 60 * 1000);
+
+            alert("종강일까지 단 " +Math.ceil(dday)+ "일");
+        }
+
+    </script>
+
+
+
+
+
+</body>
+</html>
