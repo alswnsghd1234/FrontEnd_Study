@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>필터링 관련 선택자 및 메소드</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <h1>필터링 관련 선택자 및 메소드</h1>
+    <h3>필터 관련 선택자</h3>
+
+    <table border="1">
+        <tr>
+            <td>이름</td>
+            <td>혈액형</td>
+            <td>거주지</td>
+        </tr>
+        <tr>
+            <td>어문경</td>
+            <td>O</td>
+            <td>서울</td>
+        </tr>
+        <tr>
+            <td>노민규</td>
+            <td>A</td>
+            <td>인천</td>
+        </tr>
+        <tr>
+            <td>이현수</td>
+            <td>O</td>
+            <td>서울</td>
+        </tr>
+        <tr>
+            <td>이찬주</td>
+            <td>B</td>
+            <td>서울</td>
+        </tr>
+        <tr>
+            <td>김광현</td>
+            <td>A</td>
+            <td>서울</td>
+        </tr>
+        <tr>
+            <td>추성학</td>
+            <td>AB</td>
+            <td>서울</td>
+        </tr>
+        <tr>
+            <td colspan="2">총인원</td>
+            <td>6명</td>
+        </tr>
+    </table>
+
+    <script>
+        $(function(){
+            $("tr:first").css("backgroundColor","black").css("color","white");
+            $("tr:last").css({background:"pink"});
+            $("tr:even").css("background","pink"); //짝수번째 (0부터)
+            $("tr:odd").css("background","lightblue"); //홀수번째
+        });
+    </script>
+
+    <hr>
+    <h3>필터링과 관련된 메소드</h3>
+    <p>
+        기준이 되는 요소중에서 특정 요소만을 걸러서 선택해주는 메소드 <br>
+        first(),last(),filter(),eq(),not()
+    </p>
+
+    <!-- h4.test{test-$}*6 -->
+    <h4 class="test">test-1</h4>
+    <h4 class="test">test-2</h4>
+    <h4 class="test">test-3</h4>
+    <h4 class="test">test-4</h4>
+    <h4>test-5</h4>
+    <h4 class="test">test-6</h4>
+
+
+</body>
+</html>
