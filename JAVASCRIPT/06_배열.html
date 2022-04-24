@@ -134,8 +134,7 @@
 
   <hr>
 
-  <h4>2) concat(배열1,배열2,...) : 여러개의 배열을 결합하고자 할 때 사용</
-  h4>
+  <h4>2) concat(배열1,배열2,...) : 여러개의 배열을 결합하고자 할 때 사용</h4>
   <div id="area3" class="area big"></div>
   <button onclick="concatTest();">컨캣</button>
   <script>
@@ -145,11 +144,11 @@
       var hobby=["게임","자전거","넷플릭스","산책","나나나"];
       var hobby2=["노래듣기","카페가기","잠자기","등산"];
 
-      area3.innerHTML +="hobby1 :"+hobby+"<br>";
+      area3.innerHTML +="hobby :"+hobby+"<br>";
       area3.innerHTML +="hobby2 :"+hobby2+"<br>";
 
-      area3.innerHTML +="hobby1 기준으로 합침 :"+hobby.concat(hobby2)+"<br>";
-      area3.innerHTML +="hobby1 :"+hobby+"<br>";
+      area3.innerHTML +="hobby 기준으로 합침 :"+hobby.concat(hobby2)+"<br>";
+      area3.innerHTML +="hobby :"+hobby+"<br>";
 
       //원본 배열에 영향을 끼치지 않는 메소드
       //두개의 배열을 합쳐서 새로운 배열을 반환한다.
@@ -171,7 +170,7 @@
       var doThing=["게임","등산","코노","찜질방","드라이브"];
 
       area4.innerHTML+="arr: "+doThing+"<br>";
-      area4.innerHTML+="reverse arr: "+doThing+reverse()+"<br>";
+      area4.innerHTML+="reverse arr: "+doThing.reverse()+"<br>";
       area4.innerHTML+="다시 arr:"+doThing+"<br>";
     }
   </script>
