@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+  .table-hover{
+    background-color: rebeccapurple;
+  }
+</style>
+  <title>종합 응용 예시</title>
+</head>
+<body>
+  <h2>게시판 리스트</h2>
+  <br>
+
+    <table border="1">
+      <thead>
+        <tr class="table-primary">
+          <td>글번호</td>
+          <td>제목</td>
+          <td>작성자</td>
+          <td>작성일</td>
+          <td>조회수</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>3</td>
+          <td>세번째 글내용</td>
+          <td>세롬</td>
+          <td>22.04.25</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>아라나바</td>
+          <td>나바</td>
+          <td>22.04.22</td>
+          <td>99</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>메소드</td>
+          <td>드럼</td>
+          <td>22.04.01</td>
+          <td>2</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <br><br>
+
+    선택된 게시글 정보 :
+    
+    <span id="s1">글번호</span>/
+    <span id="s2">제목</span>/
+    <span id="s3">작성자</span>/
+    <span id="s4">작성일</span>/
+    <span id="s5">조회수</span>
+    
+    <script>
+      $(function(){
+        $("tbody>tr").click(function(){
+          //console.log($(this).children().eq(1).text());
+          //this는 클릭이벤트가 발생된 tr요소 우리가 원하는건 tr안에 있는 td의 각각 요소 정보
+          //this.children 하면 td를 접근 - 각 요소마다 접근해야하니 each로 반복
+          //반복할땐 index와 element를 접근하기에 element에는 td가 담겨있음
+          $(this).children().each(function(index,element){
+            console.log("index는 "+index+"담겨있는 요소는 "+$(element).text());
+            $("#s"+index).text($(element).text());
+          });
+        });
+      });
+    </script>
+
+    <br><br>
+
+    <hr>
+
+    <button class="btn btn-primary">빨리</button>
+    <button class="btn btn-dark">끝났으면</button>
+    <button class="btn-primary">굳굳</button>
+    <button class="btn">월요일</button>
+    <button class="btn">힘들다</button>
+
+    <hr>
+
+    <div class="form-group">
+      <label for="usr">Name:</label>
+      <input type="text" class="form-control" id="usr">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd">
+    </div>
+
+    <form action="/action_page.php">
+      <div class="form-group">
+        <label for="email">Email address:</label>
+        <input type="email" class="form-control" placeholder="Enter email" id="email">
+      </div>
+      <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" placeholder="Enter password" id="pwd">
+      </div>
+      <div class="form-group form-check">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox"> Remember me
+        </label>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <!-- Button to Open the Modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+  Open modal
+</button>
+
+<br><br><br><br><br><br><br><br><br><br>
+<hr>
+<hr>
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Modal Heading</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <table border="1">
+        <thead>
+          <tr class="table-primary">
+            <td>글번호</td>
+            <td>제목</td>
+            <td>작성자</td>
+            <td>작성일</td>
+            <td>조회수</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>3</td>
+            <td>세번째 글내용</td>
+            <td>세롬</td>
+            <td>22.04.25</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>아라나바</td>
+            <td>나바</td>
+            <td>22.04.22</td>
+            <td>99</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>메소드</td>
+            <td>드럼</td>
+            <td>22.04.01</td>
+            <td>2</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+</body>
+</html>
