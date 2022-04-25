@@ -178,6 +178,24 @@
     });
   </script>
 
+      <!--동적으로 글자수 세기-->
+      <h3>도적으로 글자수 세어보기</h3>
+
+      <div>
+          150자 내로 작성하시오 <br>
+          <textarea name="" id="content" cols="30" rows="10" style="resize: none;" maxlength="150"></textarea>
+          <br>
+          <span id="count">0</span> /150
+      </div>
+  
+      <script>
+          $(function(){
+              $("#content").keyup(function(){
+                  $("#count").text($(this).val().length);
+              });
+          });
+      </script>
+
 
 
 

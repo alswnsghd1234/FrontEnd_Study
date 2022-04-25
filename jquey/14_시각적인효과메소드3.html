@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <title>시각적인 효과 메소드3</title>
+  <style>
+    div{
+      background-color: red;
+      width: 300px;
+      height: auto;
+      text-align: center;
+      border: 1px solid magenta;
+      cursor: pointer;
+    }
+    p{
+      border: 1px solid navy;
+      width: 300px;
+      height: auto;
+      display: none;
+      margin-top: 5px;
+      padding: 10px;
+      box-sizing: border-box;
+      background-color: antiquewhite;
+    }
+  </style>
+</head>
+<body>
+    <h3>slideDown() slideUp() </h3>
+
+    <div>Q.반품 언제되나요?</div>
+    <p>A.지금 확인중입니다.</p>
+
+    <div>Q.상품의 위치를 알고 싶어요</div>
+    <p>A. 배송조회를 해보시면 알 수 있어요</p>
+
+    <div>Q.무늬목?</div>
+    <p>A.아니</p>
+
+    <div>제주배송됨?</div>
+    <p>A.안됨</p>
+
+    <div>배송비 얼마냐</div>
+    <p>4만원이다</p>
+
+    <script>
+      $(function(){
+        $("div").click(function(){
+         //$(this) :현재 이벤트가 발생된 요소
+        //$(this).next() : 이벤트가 발생한 요소 다음 요소
+
+        var $answer = $(this).next();
+
+        if($answer.css("display")=="none"){
+          //p 태그의 display가 none일 때
+          $(this).siblings("p").slideUp();
+          $answer.slideDown(1000); //시간 선택가능
+
+
+        }else{
+          $answer.slideUp(1000);
+        }
+        });
+      });
+    </script>
+</body>
+</html>
