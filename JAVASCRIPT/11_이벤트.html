@@ -41,11 +41,15 @@
         }
 
         document.getElementById("btn2").onclick =function(){ //버튼2를 클릭했을때 버튼1의 이벤트를 삭제하기
-            document.getElementById("btn1").onclick=null; //이벤트 제거
+            area1.innerHTML=null; //이벤트 제거
         }
 
         document.getElementById("btn1").onmouseover =function(){
             area1.style.backgroundColor="yellow";
+        }
+
+        document.getElementById("btn1").onmouseout =function(){
+            area1.style.backgroundColor=null;
         }
         
         document.getElementById("btn1").onclick =function(){//버튼1을 클릭했을때 btn1이 클릭되었습니다 메세지넣기
@@ -204,7 +208,7 @@
             //기본 이벤트(전송) 실행을 막는다.
 
             //입력받은 userId의 length가 5이상 12이하인지 확인.
-           /* if(userId.length>=5&&userId.length<=12){
+            /* if(userId.length>=5&&userId.length<=12){
                 //입력받은 아이디의 각각 문자하나하나 조건에 맞는지 확인해야하기때문에 입력받은 아이디.length만큼 반복해야함
                 for(var i=0; i<userId.length;i++){
                 //각각의 문자 하나하나 숫자인지 또는 영문소문자인지 또는 영문 대문자인지 비교해야한다.
@@ -217,7 +221,7 @@
                     return false;
                 }
                 */
-               
+                
                 //정규표현식을 통한 유효성 검사 
                 var regExp = /^[a-zA-Z0-9]{5,12}$/; //regular expression 정규표현식 객체
                 //1.정규표현식 틀 = //
@@ -244,7 +248,7 @@
                     alert("비밀번호와 비밀번호 확인이 다릅니다.");
                     return false;
                 }
-             }
+                }
         
     </script>
 

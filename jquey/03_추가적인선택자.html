@@ -173,7 +173,7 @@
 
                 // checkbox인 요소들에 change 이벤트 발생시 실행
                 $(":checkbox").change(function(){
-                    console.log($(this).prop("value") +":"+$(this).prop("checked"));
+                    console.log($(this).attr("style") +":"+$(this).prop("checked"));
 
                     if($(this).prop("checked")){
                         $(this).css({width:"50px",height:"50px"});
