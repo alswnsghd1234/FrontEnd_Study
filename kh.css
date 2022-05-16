@@ -1,52 +1,208 @@
-#footer>div { width : 100%; }
+/* common */
 
-#footer_1 { height : 20%; }
+body{
+  color: #333;
+  font-size: 16px;
+  line-height: 1.4;
+  font-family: sans-serif;
+  position: relative;
+  left: 34px;
+}
+img {
+ display: block;
+}
 
-#footer_2 { height : 80%; }
+/* header */
+header{
+  
+}
+header .inner{
+  position: relative;
+  width: 1100px;
+  height: 120px;
+}
+header .inner .logo{
+  height: 90px;
+  position: absolute;
+  top: 60px;
+  bottom: 0;
+  left: 60px;
+}
+header .top-navi{
+ 
+  right: 170px;
+  top: 10px;
+  position: absolute;
+}
+header .top-navi ul.navi{
+  display: flex;
+}
+header .top-navi ul.navi li{
+  position: relative;
+  list-style: none;
+}
+header .top-navi ul.navi li::before{
+  content: "";
+  width: 1px;
+  height: 12px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+header .top-navi ul.navi li a{
+  font-size: 18px;
+  padding: 10px 15px;
+  display: block;
+  color: black;
+}
+header .top-navi ul.navi li a:hover{
+  
+  color: antiquewhite;
+}
+header .search{
+  position: absolute;
+  padding: 30px;
+  height: 50px;
+  width: 1200px;
+  left: 570px;
+  top: 75px;
+  
+}
+header .search .material-icons{
+  font-size: 50px;
+  vertical-align: middle;
+  
 
+  
+}
+header .search>input{
+  height: inherit;
+  width: 800px;
+  left: inherit;
+  
+}
+header .order{
+  height: 50px;
+  width: 50px;
+}
+header #order a .material-symbols-outlined{
+  font-size: 43px;
+  vertical-align: middle;
+  position: absolute;
+  right: 450px;
+  top: 108px;
+}
+header #favor a .material-symbols-outlined{
+  font-size: 43px;
+  vertical-align: middle;
+  position: absolute;
+  right: 400px;
+  top: 108px;
+}
+#navi{
+  list-style-type: none;
+            margin: auto;
+            padding: 50px;
+            height: 100%;
+}
+#navi>li{
 
+  /*방법 1 + #navi a{ transform : scale(1); 추가하기}*/
+  /* float: left; */
+  /* height: 100%;
+  width: 20%;
+  text-align: center; */
 
-#footer_2>p {
+  /*방법 2*/
+  display: inline-block;
+  width: 15%;
+  height: 42px;
+  text-align: center;
 
-width : 100%;
+  vertical-align: middle;/*inline요소들의 수직정렬 기준*/
+  background-color: lightskyblue;
+  border: 1px solid;
+  
+}
+#navi a{
+  /* border: 1px solid red; */
+  color: #333;
+  text-decoration: none;
+  font-size: 23px;
+  font-weight: bold;
+  display: block;
+  width: 100%;
+  line-height: 41px;
 
-margin : 0;
+  /* transform: scale(1); */
+}
+#navi a:hover{
+  font-size: 20px;
+  color: brown;
+}
+#navi>li>ul{
+  display: none;
+  list-style-type: none;
+  padding: 0px;
+  font-size: 43px;
+}
+#navi>li>ul a{
+  font-size: 23px;
+  margin: 14px;
+}
+#navi>li>ul a:hover{
+  font-size: 20px;
+}
 
-box-sizing : border-box;
-
-font-size : 12px;
+#navi>li>a:hover+ul {
+  /* 평소에는 안보여지다가 마우스가 올라가는 순간 펼쳐지는 효과 부여 2단계 */
+  display : block; /* 메인메뉴에만 마우스가 올라갈 때 유지가 되므로 */
+}
+.pop-pr{
+  width: 1800px;
+  height: 400px;
+  position: absolute;
+  left: 50px;
+  margin: 20px 0;
+}
+img[alt="pop-pr"]{
+  
 
 }
 
+#notice{
+  width: 200px;
+  height: 600px;
+  border: 1px;
+  margin: auto;
+  border: 1px;
 
-
-#p1 {
-
-height : 80%;
-
-padding : 5px 15px;
+  position: relative;
+  bottom: -20px;
+}
+#notice #title{
+  font-size: 30px;
+  text-align: center;
+  height: 100px;
+  width: 200px;
+  margin: auto;
+  position: absolute;
+  
+}
+#notice #content{
+  
+  top: 100px;
+  width: 200px;
+  height: 400px;
+  margin: auto;
+  position: absolute;
+  font-size: 20px;
+  text-align: center;
 
 }
-
-#p2 {
-
-height : 20%;
-
-text-align : center;
-
-}
-
-
-#footer_1>a {
-
-text-decoration : none;
-
-color : black;
-
-font-weight : 600;
-
-margin : 15px;
-
-vertical-align : middle;
-
+#notice #content li{
+  list-style: none;
+  
+  padding: 20px;
 }
