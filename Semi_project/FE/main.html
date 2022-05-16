@@ -1,111 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DsSports</title>
-    <link rel="stylesheet" href="/FE/CSS/user_style_div.css">
-    <link rel="stylesheet" href="/FE/CSS/user_style_top.css">
-    <link rel="stylesheet" href="/FE/CSS/user_style_header.css">
-    <link rel="stylesheet" href="/FE/CSS/user_style_navigator.css">
-    <link rel="stylesheet" href="/FE/CSS/user_style_content.css">
-    <link rel="stylesheet" href="/FE/CSS/user_style_footer.css">
-    <link rel="stylesheet" type="" href="/FE/CSS/main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Rubik+Moonrocks&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./main.css/main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <title>DS SPORTS</title>
 </head>
 <body>
-    <div class="wrap">
-        <div id="top">
-            <div id="top_1">
-                <a href="#" class="top_a">즐겨찾기</a>
-                <a href="#" class="top_a">마이페이지</a>
-            </div>
-            <div id="top_2"></div>
-            <div id="top_3">
-                <a href="#" class="top_a">로그인</a>
-                <a href="#" class="top_a">회원가입</a>
-                <a href="#" class="top_a">마이페이지</a>
-                <a href="#" class="top_a">고객센터</a>
-            </div>
-        </div>
-        <div id="header">
-            <div id="header_1"><img src="/FE/resources/images/DsSports.png"></div>
-            <div id="header_2">
-            <form action="search_do" method="post" id="search_form">
-            <input type="text" name="search" id="search">
-            <input type="submit" name="search_btn" id="search_btn" value="검색">
-            </form> 
-            </div>
-            <div id="header_3">
-            <a href="#"><img src="/FE/resources/images/heart.png"></a>
-            <a href="#"><img src="/FE/resources/images/shopping-cart.png"></a>
+  
+  <!-- HEADER -->
+  <header>
+    <div class="inner">
 
-            </div>
+    <a href="도메인/" class="logo"><img src="./resources/images/DsSports.png" alt="DS SPORTS"></a>
+    </div>
+
+    <!-- top navi -->
+    <div class="top-navi">
+      <ul class="navi">
+        <li><a href="#">로그인</a></li>
+        <li><a href="#">회원가입</a></li>
+        <li><a href="#">마이페이지</a></li>
+        <li><a href="#">고객센터</a></li>
+      </ul>
+    </div>
+    <!-- input -->
+    <div class="search">
+      <input type="text">
+      <div class="material-icons">search</div>
+    </div>
+    <!-- order -->
+    <div class="order">
+      <div id="order">
+        <a href="#">
+          <div class="material-symbols-outlined">
+          shopping_cart
+          </div>
+        </a>
+      </div>
+    <div id="favor">
+      <a href="#">
+        <div  class="material-symbols-outlined">
+          favorite
         </div>
-        <div id="navigator">
-            <ul id="navi">
-                <li><a href="">축구</a>
-                    <ul>
-                        <li><a href="">축구공</a></li>
-                        <li><a href="">축구화</a></li>
-                        <li><a href="">기타장비</a></li>
-                    </ul>
-                </li>
-                <li><a href="">볼링</a>
-                    <ul>
-                        <li><a href="">볼링공</a></li>
-                        <li><a href="">볼링화</a></li>
-                        <li><a href="">기타장비</a></li>
-                    </ul>
-                </li>
-                <li><a href="">웨이트</a>
-                    <ul>
-                        <li><a href="">스트랩</a></li>
-                        <li><a href="">리프팅벨트</a></li>
-                        <li><a href="">보호대</a></li>
-                    </ul>
-                </li>
-                <li><a href="">자전거</a>
-                    <ul>
-                        <li><a href="">자전거</a></li>
-                        <li><a href="">헬멧</a></li>
-                        <li><a href="">기타장비</a></li>
-                    </ul>
-                </li>
-                <li><a href="">할인 판매</a></li>
-                <li><a href="">동아리헬스장공유</a></li>
+      </a>
+    </div>
+  </div>
+      </header>
+      <!-- navigator -->
+      <div class="navigator">
+        <ul id="navi">
+          <li><a href="#">축구</a>
+            <ul>
+                <li><a href="#">축구공</a></li>
+                <li><a href="#">축구화</a></li>
+                <li><a href="#">보호장비</a></li>
             </ul>
+          </li>
+          <li><a href="#">볼링</a>
+            <ul>
+                <li><a href="#">볼링공</a></li>
+                <li><a href="#">볼링화</a></li>
+                <li><a href="#">보호장비</a></li>
+            </ul>
+          </li>
+          <li><a href="#">헬스</a>
+            <ul>
+                <li><a href="#">스트랩</a></li>
+                <li><a href="#">리프팅벨트</a></li>
+                <li><a href="#">보호대</a></li>
+            </ul>
+          </li>
+          <li><a href="#">자전거</a>
+            <ul>
+                <li><a href="#">자전거</a></li>
+                <li><a href="#">LED전등</a></li>
+                <li><a href="#">보호장비</a></li>
+            </ul>
+          </li>
+          <li><a href="#">할인판매</a>
+          </li>
+          <li><a href="#">동네헬스장공유</a>
+          </li>
+          
+        </ul>
+      </div>
 
+      <!-- 인기상품 + 공지 영역-->
+      <div class="middle">
+        <!-- 인기상품 -->
+        <div id="pop-pr">
+        <img src="https://i.ytimg.com/vi/lY3__IHES6A/maxresdefault.jpg" alt="pop-pr">
         </div>
-
-
-
-        <div id="content">
-            <div id="content_1"></div>
-            <div id="content_2"></div>
-            <div id="content_3">
-                <div id="right-menu">
-                    <h2 align="center">공지사항</h2>
-                    <ul>
-                        <li>리스트</li>
-                        <li>리스트</li>
-                        <li>리스트</li>
-                        <li>리스트</li>
-                    </ul>
-                </div>
+        <!-- 공지사항 -->
+        <div id="notice">공지사항
+            <div id="content">
+              <li><a href="#">공지제목1</a></li>
+              <li><a href="#">공지제목2</a></li>
+              <li><a href="#">공지제목3</a></li>
             </div>
         </div>
-        
-        <div id="footer">
-            <div id="footer_1"></div>
-            <div id="footer_2"></div>
-            <div id="footer_3"></div>
+      </div>
+      <!-- 인기상품 + 공지 영역 여기까지-->
+      <!-- 인기 헬스장-->
+      <div class="pop-gym">
+        <div id="gym1">
+          <img src="https://www.hsuco.or.kr/sports/File/Download/79b8474ed11e47c9c7bc3b6b3e7af76d" alt="gym1">
+          <textarea name="gym1-text" id="gym1-text" cols="30" rows="10"></textarea>
         </div>
-
-
+        <div id="gym2">
+          <img src="https://www.ddc.go.kr/site/ddc/images/contents/cnt_1833_img02.jpg" alt="gym2">
+          <textarea name="gym1-text" id="gym1-text" cols="30" rows="10"></textarea>
+        </div>
+        <div id="gym3">
+          <img src="https://www.yong-san.or.kr/sc/upload/photo/f98e7cb4d5d66ead5eba02fd5abe28d8.jpg" alt="gym3">
+          <textarea name="gym1-text" id="gym1-text" cols="30" rows="10"></textarea>
+        </div>
+      </div>
+      <!-- 인기 헬스장 여기까지-->
+      <div id="footer">
+        <div id="footer_1">
+            <a href="#">이용약관</a> |
+            <a href="#">개인정보취급방침</a> |
+            <a href="#">인재채용</a> |
+            <a href="#">고객센터</a>
+        </div>
+        <div id="footer_2">
+            <p id="p1">
+                강남지원 1관 : 서울특별시 강남구 테헤란로14길 6 남도빌딩 2F, 3F, 4F, 5F, 6F <br>
+                강남지원 2관 : 서울특별시 강남구 테헤란로10길 9 그랑프리 빌딩 4F, 5F, 7F <br>
+                강남지원 3관 : 서울특별시 강남구 테헤란로 130 호산빌딩 5F, 6F <br>
+                종로지원 : 서울특별시 중구 남대문로 120 대일빌딩 2F, 3F <br>
+                당산지원 : 서울특별시 영등포구 선유동2로 57 이레빌딩 (구관) 19F, 20F <br>
+            </p>
+            <p id="p2">Copyright © 1998-2022 KH Information Educational Institute All Right Reserved</p>
+        </div>
     </div>
 </body>
 </html>

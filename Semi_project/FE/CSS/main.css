@@ -14,7 +14,8 @@ img {
 
 /* header */
 header{
-  
+  width: 100%;
+  height: 200px;
 }
 header .inner{
   position: relative;
@@ -33,13 +34,17 @@ header .top-navi{
   right: 170px;
   top: 10px;
   position: absolute;
+  
 }
-header .top-navi ul.navi{
+header .top-navi ul.navi {
   display: flex;
+ 
+  
 }
 header .top-navi ul.navi li{
   position: relative;
   list-style: none;
+
 }
 header .top-navi ul.navi li::before{
   content: "";
@@ -55,6 +60,7 @@ header .top-navi ul.navi li a{
   padding: 10px 15px;
   display: block;
   color: black;
+  text-decoration-line: none;
 }
 header .top-navi ul.navi li a:hover{
   
@@ -64,17 +70,18 @@ header .search{
   position: absolute;
   padding: 30px;
   height: 50px;
-  width: 1200px;
+  width: 900px;
   left: 570px;
   top: 75px;
   
 }
 header .search .material-icons{
-  font-size: 50px;
-  vertical-align: middle;
-  
+  font-size: 44px;
+  position: absolute;
+  right: 120px;
+  top: 35px;
 
-  
+
 }
 header .search>input{
   height: inherit;
@@ -83,27 +90,31 @@ header .search>input{
   
 }
 header .order{
-  height: 50px;
-  width: 50px;
-}
-header #order a .material-symbols-outlined{
-  font-size: 43px;
-  vertical-align: middle;
+  height: 100px;
+  width: 200px;
   position: absolute;
-  right: 450px;
-  top: 108px;
+  right: 200px;
+  top: 110px;
 }
-header #favor a .material-symbols-outlined{
-  font-size: 43px;
-  vertical-align: middle;
+header .order #order a .material-symbols-outlined{
+  font-size: 44px;
   position: absolute;
-  right: 400px;
-  top: 108px;
+  right: 100px;
+  color: #333;
+
+
+}
+header .order #favor a .material-symbols-outlined{
+  font-size: 44px;
+  position: absolute;
+  color: #333;
+}
+
+.navigator{
+  margin: 40px 0;
 }
 #navi{
   list-style-type: none;
-            margin: auto;
-            padding: 50px;
             height: 100%;
 }
 #navi>li{
@@ -153,56 +164,121 @@ header #favor a .material-symbols-outlined{
 }
 #navi>li>ul a:hover{
   font-size: 20px;
+  
 }
 
 #navi>li>a:hover+ul {
   /* 평소에는 안보여지다가 마우스가 올라가는 순간 펼쳐지는 효과 부여 2단계 */
-  display : block; /* 메인메뉴에만 마우스가 올라갈 때 유지가 되므로 */
+  display : block;
+ /* 메인메뉴에만 마우스가 올라갈 때 유지가 되므로 */
+ background-color: lightblue;
+ text-align: center;
+ border: 1px solid black;
+ 
 }
-.pop-pr{
+#navi>li>a:hover+ul>li{
+  border: 1px solid black;
+  z-index: -1;
+}
+.middle{
+  width: 1800px;
+  height: 500px;
+  margin: 40px 40px;
+  padding: 10px;
+  position: relative;
+  
+}
+.middle #pop-pr{
+  width: 90%;
+  height: 500px;
+  float: left;
+}
+.middle #pop-pr img{
+  width: 92%;
+  height: 500px;
+}
+.middle #notice{
+  background-color: saddlebrown;
+  width: 10%;
+  height: inherit;
+  float: left;
+  text-align: center;
+  font-size: 24px;
+}
+.middle #notice #content{
+  background-color: aliceblue;
+  position: absolute;
+  width: 10%;
+  height: 350px;
+  bottom: 10px;
+}
+.middle #notice #content li{
+ list-style: none;
+ font-size: 20px;
+}
+.pop-gym{
   width: 1800px;
   height: 400px;
-  position: absolute;
-  left: 50px;
-  margin: 20px 0;
-}
-img[alt="pop-pr"]{
-  
+
+  margin: 10px 45px;
 
 }
-
-#notice{
-  width: 200px;
-  height: 600px;
-  border: 1px;
-  margin: auto;
-  border: 1px;
-
-  position: relative;
-  bottom: -20px;
+.pop-gym img{
+  height: 200px;
+  width: 90%;
+  margin: 5px;
 }
-#notice #title{
-  font-size: 30px;
+.pop-gym #gym1-text{
+  width: 90%;
+  margin: 5px;
+}
+.pop-gym #gym1{
+  width: 33%;
+  float: left;
+  height: inherit;
+
+}
+.pop-gym #gym2{
+  width: 33%;
+  float: left;
+  height: inherit
+}
+.pop-gym #gym3{
+  width: 33%;
+  float: left;
+  height: inherit;
+}
+#footer{
+  margin: 30px;
+}
+#footer>div{
+  width: 100%;
+}
+#footer_1{
+  height: 20%;
+  padding-top: 5px;
+}
+#footer_2{
+  height: 80%;
+}
+#footer_2>p{
+  width: 100%;
+  /* border: 1px solid red; */
+  margin: 0;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+#p1{
+  height: 80%;
+  padding: 5px 40px;/*상하/좌우*/
+}
+#p2{
+  height: 20%;
   text-align: center;
-  height: 100px;
-  width: 200px;
-  margin: auto;
-  position: absolute;
-  
 }
-#notice #content{
-  
-  top: 100px;
-  width: 200px;
-  height: 400px;
-  margin: auto;
-  position: absolute;
-  font-size: 20px;
-  text-align: center;
-
-}
-#notice #content li{
-  list-style: none;
-  
-  padding: 20px;
+#footer_1>a{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  padding: 40px;
 }
