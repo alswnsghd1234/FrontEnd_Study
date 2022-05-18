@@ -161,16 +161,20 @@ header .order #favor a .material-symbols-outlined{
   text-align: center;
   display: none;
 }
+#navi>li:hover+ul{
+  display: block;
+}
+#navi>li>ul:hover{
+  display: block;
+}
 #navi>li>ul a{
   
   font-size: 23px;
   margin: 30px 0;
   text-align: center;
-}
-#navi>li>ul a:hover{
-  font-size: 20px;
   display : block;
 }
+
 
 #navi>li>a:hover+ul {
   /* 평소에는 안보여지다가 마우스가 올라가는 순간 펼쳐지는 효과 부여 2단계 */
@@ -181,110 +185,12 @@ background-color: lightslategray;
 border: 1px solid black;
 
 }
+#navi>li>a:hover+ul:hover{
+  display: block;
+}
 #navi>li>a:hover+ul>li{
   border: 1px solid black;
   z-index: -1;
+  display : block;
   
-}
-.middle{
-  width: 1800px;
-  height: 500px;
-  margin: 40px 40px;
-  padding: 10px;
-  position: relative;
-  
-}
-.middle #pop-pr{
-  width: 90%;
-  height: 500px;
-  float: left;
-}
-.middle #pop-pr img{
-  width: 92%;
-  height: 500px;
-}
-.middle #notice{
-  background-color: saddlebrown;
-  width: 10%;
-  height: inherit;
-  float: left;
-  text-align: center;
-  font-size: 24px;
-}
-.middle #notice #content{
-  background-color: aliceblue;
-  position: absolute;
-  width: 10%;
-  height: 350px;
-  bottom: 10px;
-}
-.middle #notice #content li{
- list-style: none;
- font-size: 20px;
-}
-.pop-gym{
-  width: 1800px;
-  height: 400px;
-
-  margin: 10px 45px;
-
-}
-.pop-gym img{
-  height: 200px;
-  width: 90%;
-  margin: 5px;
-}
-.pop-gym #gym1-text{
-  width: 90%;
-  margin: 5px;
-}
-.pop-gym #gym1{
-  width: 33%;
-  float: left;
-  height: inherit;
-
-}
-.pop-gym #gym2{
-  width: 33%;
-  float: left;
-  height: inherit
-}
-.pop-gym #gym3{
-  width: 33%;
-  float: left;
-  height: inherit;
-}
-#footer{
-  margin: 30px;
-}
-#footer>div{
-  width: 100%;
-}
-#footer_1{
-  height: 20%;
-  padding-top: 5px;
-}
-#footer_2{
-  height: 80%;
-}
-#footer_2>p{
-  width: 100%;
-  /* border: 1px solid red; */
-  margin: 0;
-  font-size: 15px;
-  box-sizing: border-box;
-}
-#p1{
-  height: 80%;
-  padding: 5px 40px;/*상하/좌우*/
-}
-#p2{
-  height: 20%;
-  text-align: center;
-}
-#footer_1>a{
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-  padding: 40px;
 }
