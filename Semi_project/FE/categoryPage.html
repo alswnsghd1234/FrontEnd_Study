@@ -16,7 +16,7 @@
   <header>
     <div class="inner">
 
-    <a href="도메인/" class="logo"><img src="./resources/images/DsSports.png" alt="DS SPORTS"></a>
+    <a href="./main.html" class="logo"><img src="./resources/images/DsSports.png" alt="DS SPORTS"></a>
     </div>
 
     <!-- top navi -->
@@ -30,7 +30,7 @@
     </div>
     <!-- input -->
     <div class="search">
-      <input type="text">
+      <input type="text" placeholder="검색" style="font-size: 20px;">
       <div class="material-icons">search</div>
     </div>
     <!-- order -->
@@ -54,28 +54,32 @@
       <!-- navigator -->
       <div class="navigator">
         <ul id="navi">
-          <li id="navi1"><a href="#" >축구</a>
+          <li id="navi1">
+            <a href="#" >축구</a>
             <ul id="navi1-1">
-                <li><a href="#">축구공</a></li>
-                <li><a href="#">축구화</a></li>
-                <li><a href="#">보호장비</a></li>
+                <li id="boal"><a href="#">축구공</a></li>
+                <li id="shoes"><a href="#">축구화</a></li>
+                <li id="wear"><a href="#">보호장비</a></li>
             </ul>
           </li>
-          <li id="navi2"><a href="#">볼링</a>
+          <li id="navi2">
+            <a href="#">볼링</a>
             <ul id="navi2-1">
                 <li><a href="#">볼링공</a></li>
                 <li><a href="#">볼링화</a></li>
                 <li><a href="#">보호장비</a></li>
             </ul>
           </li>
-          <li id="navi3" ><a href="#">헬스</a>
+          <li id="navi3" >
+            <a href="#">헬스</a>
             <ul id="navi3-1">
                 <li><a href="#">스트랩</a></li>
                 <li><a href="#">리프팅벨트</a></li>
                 <li><a href="#">보호대</a></li>
             </ul>
           </li>
-          <li id="navi4"><a href="#">자전거</a>
+          <li id="navi4">
+            <a href="#">자전거</a>
             <ul  id="navi4-1">
                 <li><a href="#">자전거</a></li>
                 <li><a href="#">LED전등</a></li>
@@ -89,6 +93,37 @@
           
         </ul>
       </div>
+      <!-- <script>
+        function change_cate(){
+          if(onclick="#boal"){
+            var changedCate = document.getElementsByClassName("category")
+            changedCate.
+          }
+          
+        }
+
+
+      </script> -->
+
+      <!-- 첫번째 카테고리 나열 -->
+
+      <div class="category">
+        <ul id="top-cate">
+          <a href="./detailPage.html"><li id="top-cate1"><img src="http://melkinsports.com/web/product/big/20200227/03b2e81be93aafa5ff4f92f02d6c45d6.png" alt=""></li></a>
+          <a href="./detailPage.html"><li id="top-cate2"><img src="http://melkinsports.com/web/product/big/20200227/03b2e81be93aafa5ff4f92f02d6c45d6.png" alt=""></li></a>
+          <a href="./detailPage.html"><li id="top-cate3"><img src="http://melkinsports.com/web/product/big/20200227/03b2e81be93aafa5ff4f92f02d6c45d6.png" alt=""></li></a>
+          <a href="./detailPage.html"><li id="top-cate4"><img src="http://melkinsports.com/web/product/big/20200227/03b2e81be93aafa5ff4f92f02d6c45d6.png" alt=""></li></a>
+          <a href="./detailPage.html"><li id="top-cate5"><img src="http://melkinsports.com/web/product/big/20200227/03b2e81be93aafa5ff4f92f02d6c45d6.png" alt=""></li></a>
+        </ul>
+        <ul id="bottom-cate">
+          <a href="./detailPage.html"><li id="bottom-cate1"><img src="https://contents.lotteon.com/itemimage/_v111222/LO/15/07/45/49/91/_1/50/74/54/99/2/LO1507454991_1507454992_1.jpg/dims/resizef/720X720" alt=""></li></a>
+          <a href="./detailPage.html"><li id="bottom-cate2"><img src="https://contents.lotteon.com/itemimage/_v111222/LO/15/07/45/49/91/_1/50/74/54/99/2/LO1507454991_1507454992_1.jpg/dims/resizef/720X720" alt=""></li></a>
+          <a href="./detailPage.html"><li id="bottom-cate3"><img src="https://contents.lotteon.com/itemimage/_v111222/LO/15/07/45/49/91/_1/50/74/54/99/2/LO1507454991_1507454992_1.jpg/dims/resizef/720X720" alt=""></li></a>
+          <a href="./detailPage.html"><li id="bottom-cate4"><img src="https://contents.lotteon.com/itemimage/_v111222/LO/15/07/45/49/91/_1/50/74/54/99/2/LO1507454991_1507454992_1.jpg/dims/resizef/720X720" alt=""></li></a>
+          <a href="./detailPage.html"><li id="bottom-cate5"><img src="https://contents.lotteon.com/itemimage/_v111222/LO/15/07/45/49/91/_1/50/74/54/99/2/LO1507454991_1507454992_1.jpg/dims/resizef/720X720" alt=""></li></a>
+        </ul>
+      </div>
+      
 
     </body>
     </html>

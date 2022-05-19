@@ -109,7 +109,7 @@ header .order #favor a .material-symbols-outlined{
   position: absolute;
   color: #333;
 }
-
+/* 네비게이터 시작 */
 .navigator{
   margin: 40px 0;
 }
@@ -149,7 +149,7 @@ header .order #favor a .material-symbols-outlined{
   /* transform: scale(1); */
 }
 #navi a:hover{
-  font-size: 20px;
+  font-size: 30px;
   color: brown;
 }
 #navi>li>ul{
@@ -161,10 +161,10 @@ header .order #favor a .material-symbols-outlined{
   text-align: center;
   display: none;
 }
-#navi>li:hover+ul{
+.navigator #navi1-1{
   display: block;
 }
-#navi>li>ul:hover{
+#navi>li:hover+ul{
   display: block;
 }
 #navi>li>ul a{
@@ -176,7 +176,7 @@ header .order #favor a .material-symbols-outlined{
 }
 
 
-#navi>li>a:hover+ul {
+#navi>li>a:hover+#navi2-1 {
   /* 평소에는 안보여지다가 마우스가 올라가는 순간 펼쳐지는 효과 부여 2단계 */
   display : block;
  /* 메인메뉴에만 마우스가 올라갈 때 유지가 되므로 */
@@ -185,12 +185,80 @@ background-color: lightslategray;
 border: 1px solid black;
 
 }
-#navi>li>a:hover+ul:hover{
-  display: block;
-}
-#navi>li>a:hover+ul>li{
-  border: 1px solid black;
-  z-index: -1;
-  display : block;
+
+
+/* 첫번째 카테고리 나열 */
+.category{
   
+  position: absolute;
+  width: 1400px;
+  height: 400px;
+  margin: 50px 0;
+  
+  margin: 40px;
+  right: 120px;
+}
+.category ul{
+  
+  height: 50%;
+}
+.category li{
+  display: inline-block;
+  
+  height: 100%;
+  width: 18%;
+  border: 1px solid black;
+}
+.category li>img{
+  height: inherit;
+}
+/* 두번째 카테고리 나열 */
+.category2{
+  
+  position: absolute;
+  width: 1400px;
+  height: 400px;
+  margin: 50px 0;
+  
+  margin: 40px;
+  right: 120px;
+}
+.category ul{
+  
+  height: 50%;
+}
+.category li{
+  display: inline-block;
+  
+  height: 100%;
+  width: 18%;
+  border: 1px solid black;
+}
+.category li>img{
+  height: inherit;
+}
+/* 세번째 카테고리 나열 */
+.category3{
+  
+  position: absolute;
+  width: 1400px;
+  height: 400px;
+  margin: 50px 0;
+  
+  margin: 40px;
+  right: 120px;
+}
+.category ul{
+  
+  height: 50%;
+}
+.category li{
+  display: inline-block;
+  
+  height: 100%;
+  width: 18%;
+  border: 1px solid black;
+}
+.category li>img{
+  height: inherit;
 }
